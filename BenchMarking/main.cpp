@@ -30,11 +30,14 @@ int main()
     cout<<"Make Unique"<<endl;
 
     {
-        std::array<std::shared_ptr<Vector2>,1000> sharedPtrs;
+        std::array<std::unique_ptr<Vector2>,1000> uniquePtrs;
         Timer timer;
-        for(int i =0;i<sharedPtrs.size();i++)
-            sharedPtrs[i] = std::make_unique<Vector2>(new Vector2());
+        for(int i =0;i<uniquePtrs.size();i++)
+            uniquePtrs[i] = std::make_unique<Vector2>();
     }
+
+
+
 
     // int value = 0;
     // {
